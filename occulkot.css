@@ -250,10 +250,10 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .fa-heart:before {
   content: "\f004"; }
 
-.fa-star:before, .dijitIcon[src*="images/star.png"] ~ span:before {
+.fa-star:before {
   content: "\f005"; }
 
-.fa-star-o:before {
+.fa-star-o:before, .dijitIcon[src*="images/star.png"] ~ span:before {
   content: "\f006"; }
 
 .fa-user:before {
@@ -299,12 +299,7 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .fa-home:before {
   content: "\f015"; }
 
-.fa-file-o:before, .dijitIcon[src*="images/folder.png"] ~ span:before,
-.dijitIcon[src*="images/fresh.png"] ~ span:before,
-.dijitIcon[src*="images/star.png"] ~ span:before,
-.dijitIcon[src*="images/feed.png"] ~ span:before,
-.dijitIcon[src*="images/archive.png"] ~ span:before,
-.dijitIcon[src*="images/time.png"] ~ span:before, .whiteBox:before {
+.fa-file-o:before, .whiteBox:before {
   content: "\f016"; }
 
 .fa-clock-o:before, .dijitIcon[src*="images/time.png"] ~ span:before {

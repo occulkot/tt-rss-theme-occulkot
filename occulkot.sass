@@ -26,7 +26,6 @@ $toolbar: #ddd
 .dijitIcon[src*="images/time.png"]
   display: none
   & ~ span:before
-    @extend .fa-file-o
     @extend .fa
     width: 15px
     margin-left: 20px
@@ -71,7 +70,8 @@ $toolbar: #ddd
 
 .dijitIcon[src*="images/star.png"]
   & ~ span:before
-    @extend .fa-star 
+    @extend .fa-star-o
+    
 
 .dijitIcon[src*="images/archive.png"]
   & ~ span:before
