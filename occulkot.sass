@@ -1,0 +1,592 @@
+z-ininput[type="search"]
+  -webkit-appearance: none
+textarea 
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+.claro .dijitBorderContainer, .claro .dijitSplitContainer-dijitContentPane, .claro .dijitBorderContainer-dijitContentPane 
+  padding: 0
+img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child 
+  border: 0
+
+$ramka: #999
+$toolbar: #ddd
+
+
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:500,400,700&subset=latin,latin-ext')
+@import "occulkot/font-awesome/scss/font-awesome"
+#feeds-holder
+  background: #111
+  color: #aaa
+
+.dijitIcon[src*="images/folder.png"],
+.dijitIcon[src*="images/fresh.png"],
+.dijitIcon[src*="images/star.png"],
+.dijitIcon[src*="images/feed.png"],
+.dijitIcon[src*="images/archive.png"],
+.dijitIcon[src*="images/time.png"]
+  display: none
+  & ~ span:before
+    @extend .fa-file-o
+    @extend .fa
+    width: 15px
+    margin-left: 20px
+    margin-right: 5px
+    text-align: center
+    &:before
+      font-size: 10px
+        
+.claro .dijitTreeExpandoClosed,
+.claro .dijitTreeExpandoOpened
+  display: none
+  & ~ .dijitExpandoText
+    display: block
+    float: left
+    width: 30px
+    z-index: 14
+    cursor: pointer
+    color: transparent
+  & ~ .dijitExpandoText:before
+    @extend .fa-chevron-right
+    @extend .fa
+    color: red
+    padding-left: 2px
+    &:before
+      position: absolute
+        
+.claro .dijitTreeExpandoOpened
+  & ~ .dijitExpandoText:before
+    @extend .fa-chevron-down
+        
+.dijitIcon[src*="lib/dojo/resources/blank.gif"]
+  display: none
+    
+
+.dijitIcon[src*="images/folder.png"]
+  & ~ span:before
+    @extend .fa-folder
+
+.dijitIcon[src*="images/fresh.png"]
+  & ~ span:before
+    @extend .fa-leaf
+
+.dijitIcon[src*="images/star.png"]
+  & ~ span:before
+    @extend .fa-star 
+
+.dijitIcon[src*="images/archive.png"]
+  & ~ span:before
+    @extend .fa-archive
+
+.dijitIcon[src*="images/feed.png"]
+  & ~ span:before
+    @extend .fa-share-square   
+
+.dijitIcon[src*="images/time.png"]
+  & ~ span:before
+    @extend .fa-clock-o
+
+.claro
+  
+  .loadingNode
+    display: none
+  .dijitTreeRowHover,   .dijitTreeRowSelected,   .dijitTreeRow, .dijitHover, .dijitTreeContent
+    color: inherit
+    border: 0px
+    padding: 0px
+    margin: 0px
+    background: transparent
+  .dijitInline
+    float: left
+  .counterNode
+    text-align: center
+    width: 15px
+    font-size: 11px
+    margin-top: 3px
+    position: absolute
+    left: 13px
+        
+  .feedIcon, .dijitTreeIcon
+    float: left
+    min-width: 15px
+    max-width: 15px
+    max-height: 15px
+    margin-right: 5px
+  .dijitTreeContent
+    float: left
+  .dijitInline > .dijitTreeContent
+    float: none
+  .dijitTreeLabel
+    cursor: pointer
+    display: block
+    float: none
+  .dijitTreeExpando
+    float: left
+  .dijitTreeContainer   .dijitTreeContainer   .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent > .dijitTreeIcon
+    margin-left: 20px
+  .dijitTreeNode
+    position: relative
+    
+  .dijitTreeContainer :first-child .dijitTreeRow
+    padding-top: 10px
+  .dijitTreeIsLast .dijitTreeRow
+    margin-bottom: 10px
+  .dijitTreeRow
+    padding-top: 2px
+
+  .dijitTreeRowHover
+    color: red
+  .dijitTreeRowSelected 
+    font-weight: bold
+    color: white
+  .dijitToolbar
+    background: transparent
+    border: 0px
+  .dijitSplitterV
+    background: $ramka
+  .dijitSplitterVHover
+    background: #999
+#toolbar, #headlines-toolbar, .dijitDialog
+  .dijitComboButtonHover,
+  .dijitComboButtonHover .dijitButtonNodeHover,
+  .dijitButtonNode,
+  .dijitComboButtonFocused .dijitButtonNodeHover
+    background: transparent
+    padding: 0px
+    border: 0px
+
+button[title="Subscribe To Feed"] 
+  @extend .fa-plus-circle
+  &:after
+    content: '+add'
+button[title="Toggle Expanded View"] 
+  @extend .fa-expand
+  &:after
+    content: 'expand'
+button[title="Mark feed as read"] 
+  @extend .fa-check-square
+  &:after
+    content: 'mark'
+button[title="Refresh Feed"] 
+  @extend .fa-refresh
+  &:after
+    content: 'refresh'
+button[title="Previous Post"] 
+  @extend .fa-chevron-up
+  &:after
+    content: 'prev'
+button[title="Next Post"] 
+  @extend .fa-chevron-down
+  &:after
+    content: 'next'
+#toolbar .actionChooser .dijitDropDownButton .dijitButtonNode
+  @extend .fa-wrench
+  &:after
+    content: 'tools'
+
+  
+.claro .dijitDialog,
+.claro .dijitSelectMenu,
+.claro .dijitMenu
+  background: #ddd
+  border: 1px solid $ramka
+  .dijitMenuItem td
+    border: 0px
+    border-top: 1px solid $ramka
+  :first-child td
+    border-top: 0px
+      
+  .dijitMenuItemHoverFocused,
+  .dijitMenuItemHover,
+  .dijitMenuItemFocused,
+  .dijitMenuItemSelected,
+  .dijitMenuItemLabel,
+  .dijitFocused,
+  .dijitHoverFocused,
+  .dijitHoverFocused,
+  .dijitSelected,
+  .dijitSelectedOption
+    td 
+      background: transparent
+      color: red
+    background: transparent
+    color: red
+  .dijitDisabled
+    background: #ccc
+  .dijitHover, .dijitMenuItemHover
+    background: #333 
+    color: red    
+#toolbar .actionChooser .dijitDropDownButton .dijitButtonNode,      
+.button_nav, .button_nav:hover
+  border: 0px !important
+  border-radius: 0px !important
+  color: black
+  opacity: 1 !important
+  vertical-align: top !important
+  *
+    display: none
+  &:after
+    z-index: 15
+    position: absolute
+    text-align: center
+    display: block
+    color: #888
+    font-weight: middle
+    position: relative
+    top: -10px
+    font-size: 9px
+  @extend .fa
+  @extend .fa-lg
+  width: 37px !important
+  height: 23px !important
+  margin: 0px 1px !important
+  margin-top: 1px
+  padding: 0px !important
+  &:before
+    padding-top: 0px
+    position: relative
+    top: -1px
+    left: -3px
+    background: $toolbar
+    width: 40px
+    height: 25px
+    color: black
+    display: inline-block
+.button_nav:hover:before
+  color: red
+
+html, button, input, select, textarea 
+  font-family: 'Ubuntu', sans-serif
+
+#toolbar-splitter
+  display: none
+
+#toolbar
+  overflow: hidden
+  text-align: right
+  height: 30px !important
+  padding: 5px
+  .actionChooser
+    text-align: right
+    z-index: 20
+    .dijitInline
+      float: none
+    .dijitHoverFocused
+      border: 0px
+      background: transparent
+
+$hidden_text: #888    
+#toolbar, #headlines-toolbar
+  position: absolute
+  top: 0px !important
+  left: 0px  !important
+  background: $toolbar
+#toolbar, #headlines-toolbar, .dijitDialog
+  .dijitToolbar .dijitButtonContents
+    padding: 0px
+    
+  .dijitSelect, .dijitComboButton
+    margin-left: 2px
+    margin-right: 2px
+    border: 1px solid $ramka
+    border-radius: 3px
+    background: #ddd
+    position: relative
+    font-size: 13px
+    .dijitInputField, .dijitSelectLabel
+      padding: 0px
+    .dijitButtonText
+      padding: 2px
+      
+    .dijitArrowButtonContainer, .dijitButtonContents, .dijitDownArrowButton
+      border: 0px
+      background: transparent
+    .dijitArrowButtonChar
+      color: transparent
+      width: 0px
+      display: none
+    .dijitArrowButtonInner,
+    .dijitArrowButton
+      z-index: 20
+      background: none
+      width: 15px
+      input
+        width: 15px
+        height: 15px
+        color: transparent
+        border: 0px
+        background: transparent
+  .dijitComboButton  .dijitArrowButtonInner,
+  .dijitSelect .dijitButtonText ~ .dijitReset
+    z-index: 10
+    &:before
+      z-index: 10
+    @extend .fa
+    @extend .fa-chevron-down
+    float: none
+    display: block
+    position: absolute
+    top: 4px
+    right: 2px
+    input
+      display: none
+            
+#headlines-toolbar
+  background: #d0d0d0
+  height: 20px
+  z-index: 3
+  position: relative
+  padding-bottom: 2px
+  padding-top: 3px
+  border-bottom: 1px solid $ramka
+  text-align: right
+  font-size: 11px
+  a
+    color: red
+    text-decoration: none
+  #selected_prompt
+    color: $hidden_text
+    padding: 0px
+    margin: 0px 10px
+    font-size: 11px
+  #feed_title
+    position: absolute
+    font-weight: bold
+    left: 30px
+    top: 3px
+    font-size: 15px
+  .r
+    text-align: center
+  .r>a
+    position: absolute
+    top: 5px
+    left: 7px
+    img
+      display: none  
+    &:before
+      font-size: 15px
+      display: block
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 20px
+      height: 20px
+      @extend .fa
+      @extend .fa-rss
+      color: red
+        
+    
+  
+  .dijitInline
+    float: none
+#headlines-wrap-inner
+  top: 40px !important
+  z-index: 10 !important
+#headlines-frame
+  z-index: 5
+  top: 26px !important
+
+$feed_border: #aaa    
+#floatingTitle
+  z-index: 40
+  position: absolute
+  top: 26px
+  margin-right: 15px
+  height: 40px
+.cdm
+  hr
+    display: none
+
+#headlines-toolbar_splitter
+  display: none
+.cdmFooter
+  padding: 4px !important
+  font-size: 11px
+  color: #777
+  background: #ccc
+  border-bottom: 2px solid $feed_border
+  div
+    padding: 0px
+     
+  img
+    vertical-align: top
+    margin: 0px 2px 0px 2px
+    width: 15px
+    height: auto
+  .markasread
+    min-width: 13px !important
+    font-size: 13px
+    min-height: 12px !important
+    img
+      display: none
+    @extend .fa
+    @extend .fa-check-square-o
+    background: none !important
+    &:before
+      padding-top: 1px
+  img[src*="images/tag.png"]
+    display: none
+    & ~ span:before
+      @extend .fa
+      @extend .fa-tags
+      margin-right: 3px
+  a
+    color: #800
+    text-decoration: none
+.Unread .cdmFooter .markasread
+  @extend .fa-square-o
+  
+.cdmHeader, #floatingTitle
+  background: #eee
+  .dijitInline
+    float: none
+  position: relative
+  padding-top: 5px
+  padding-bottom: 5px
+  & > div:first-child
+    width: 80px
+    text-align: right
+    background: #333
+    border: 1px solid #333
+    position: absolute
+    right: 3px
+    top: 8px
+    padding: 2px
+    vertical-align: top !important
+    img
+      width: 15px
+      height: auto
+      margin: 2px
+      margin-left: 3px
+      margin-bottom: 0px
+    border-radius: 3px
+    .dijitCheckBoxChecked.dijitCheckBox, 
+    .dijitCheckBoxCheckedHover.dijitCheckBox
+      @extend .fa-check-square-o
+    .dijitCheckBox, 
+    .dijitCheckBoxHover
+      *
+        display: block
+        bacground: transparent
+      width: 15px
+      position: relative
+      background: none
+      padding: 0
+      color: #888
+      margin: 0px
+      height: 15px
+      margin-top: -5px
+      @extend .fa
+      @extend .fa-square-o
+      &:before
+        left: 0px
+        position: absolute
+  .titleWrap
+    a.title
+      margin-bottom: 5px
+      color: #555
+      font-weight: medium
+      text-decoration: none
+      padding-left: 30px
+      padding-right: 90px
+      
+      display: block
+      font-size: 25px
+      line-height: 0.6
+      padding-top: 3px
+    .author
+      color: #999
+      padding-left: 40px
+      display: block
+      float: left
+      font-size: 12px
+  .hlFeed
+    float: left
+  .hlFeed, .updated
+    padding-left: 20px
+    font-size: 12px
+    color: #999
+    a
+      color: #69d
+  .hlFeed:before
+    margin-left: 20px
+    content: 'feed: '
+  .updated:before
+    margin-left: 20px
+    content: 'date: '
+      
+  .scoreWrap
+    .hlScorePic
+      position: absolute
+      top: 12px
+      right: 67px
+    span
+      position: absolute
+      left: 10px
+      top: 10px
+      img
+        min-width: 15px
+        max-width: 15px
+        max-height: 15px
+.cdmContentInner
+  clear: both
+  padding: 10px !important
+  padding-left: 50px !important
+  img
+    max-width: 100%
+    height: auto
+.whiteBox
+  @extend .fa
+  @extend .fa-lg
+  @extend .fa-file-o
+  &:before
+    font-weight: normal
+    color: #999
+    float: left
+    width: 40px
+    padding-top: 20px
+    font-size: 80px
+  vertical-aligm: top
+  position: absolute
+  left: 50%
+  width: 500px
+  margin-left: -250px
+  text-align: center
+  top: 50%
+  font-weight: bold
+  font-size: 30px
+  margin-top: -30px
+  p
+    font-weight: normal
+    font-size: 11px
+    color: #999
+#overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $ramka
+  &:before
+    height: 90%
+    content: ""
+#overlay_inner
+  display: inline-block
+.claro #feedAddDlg.dijitDialog
+  border: 1px solid $ramka
+  background: #eee
+  .dijitDialogTitleBar
+    background: #222
+    color: red
+    border: 0px
+    .dijitDialogCloseIcon,
+    .dijitDialogCloseIconHover
+      background: transparent
+      width: 15px
+      @extend .fa
+      @extend .fa-times-circle
+  .dijitDialogTitle
+    color: red
+  .dlgSecCont
+    .dijitInline
+      float: none
+      
