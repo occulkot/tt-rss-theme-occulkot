@@ -10,13 +10,15 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child
 
 $ramka: #999
 $toolbar: #ddd
-
+$brak: #666
+$nieprzeczytane: #ccc
+$panel: #111
 
 @import url('http://fonts.googleapis.com/css?family=Ubuntu:500,400,700&subset=latin,latin-ext')
 @import "occulkot/font-awesome/scss/font-awesome"
 #feeds-holder
-  background: #111
-  color: #aaa
+  background:  $panel
+  color: $brak
 
 .dijitIcon[src*="images/folder.png"],
 .dijitIcon[src*="images/fresh.png"],
@@ -25,22 +27,25 @@ $toolbar: #ddd
 .dijitIcon[src*="images/archive.png"],
 .dijitIcon[src*="images/time.png"]
   display: none
+  & ~ span
+    margin-left: 40px !important
   & ~ span:before
     @extend .fa
-    width: 15px
-    margin-left: 20px
-    margin-right: 5px
+    width: 20px
+    position: relative
     text-align: center
     &:before
       font-size: 10px
         
-.claro .dijitTreeExpandoClosed,
-.claro .dijitTreeExpandoOpened
+.claro #feeds-holder .dijitTreeExpandoClosed,
+.claro #feeds-holder .dijitTreeExpandoOpened
   display: none
   & ~ .dijitExpandoText
     display: block
     float: left
-    width: 30px
+    width: 20px
+    margin-right: 20px
+    text-align: right
     z-index: 14
     cursor: pointer
     color: transparent
@@ -52,7 +57,7 @@ $toolbar: #ddd
     &:before
       position: absolute
         
-.claro .dijitTreeExpandoOpened
+.claro #feeds-holder .dijitTreeExpandoOpened
   & ~ .dijitExpandoText:before
     @extend .fa-chevron-down
         
@@ -85,7 +90,7 @@ $toolbar: #ddd
   & ~ span:before
     @extend .fa-clock-o
 
-.claro
+.claro #feeds-holder 
   
   .loadingNode
     display: none
@@ -95,57 +100,64 @@ $toolbar: #ddd
     padding: 0px
     margin: 0px
     background: transparent
-  .dijitInline
-    float: left
   .counterNode
     text-align: center
-    width: 15px
+    width: 20px
     font-size: 11px
     margin-top: 3px
     position: absolute
-    left: 13px
-        
+    left: 20px
+  .dijitTreeExpandoLeaf
+    display: none
   .feedIcon, .dijitTreeIcon
     float: left
     min-width: 15px
     max-width: 15px
     max-height: 15px
     margin-right: 5px
-  .dijitTreeContent
-    float: left
-  .dijitInline > .dijitTreeContent
-    float: none
   .dijitTreeLabel
     cursor: pointer
     display: block
     float: none
   .dijitTreeExpando
     float: left
-  .dijitTreeContainer   .dijitTreeContainer   .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent > .dijitTreeIcon
-    margin-left: 20px
+  .dijitTreeContainer   .dijitTreeContainer   .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent
+    position: relative
+    .dijitTreeLabel
+      margin-left: 60px
+    .dijitTreeIcon
+      position: absolute
+      left: 0px
   .dijitTreeNode
     position: relative
-    
-  .dijitTreeContainer :first-child .dijitTreeRow
-    padding-top: 10px
+  .dijitTreeContainer .dijitTreeNode:first-child
+    margin-top: 10px
   .dijitTreeIsLast .dijitTreeRow
     margin-bottom: 10px
   .dijitTreeRow
+    position: relative
     padding-top: 2px
+    .dijitInline
+      display: none
+    .dijitTreeContent
+      margin-left: 40px
 
+  .Unread.dijitTreeRow
+    color: $nieprzeczytane
   .dijitTreeRowHover
     color: red
   .dijitTreeRowSelected 
     font-weight: bold
     color: white
-  .dijitToolbar
-    background: transparent
-    border: 0px
+.claro      
   .dijitSplitterV
     background: $ramka
   .dijitSplitterVHover
     background: #999
 #toolbar, #headlines-toolbar, .dijitDialog
+  .dijitToolbar
+    background: transparent
+    border: 0px
   .dijitComboButtonHover,
   .dijitComboButtonHover .dijitButtonNodeHover,
   .dijitButtonNode,
@@ -153,7 +165,8 @@ $toolbar: #ddd
     background: transparent
     padding: 0px
     border: 0px
-
+  .dijitInline
+    float: left
 button[title="Subscribe To Feed"] 
   @extend .fa-plus-circle
   &:after
@@ -433,9 +446,8 @@ $feed_border: #aaa
     color: #800
     text-decoration: none
 .Unread .cdmFooter .markasread
-  @extend .fa-square-o
-  
-.cdmHeader, #floatingTitle
+  @extend .fa-square-o  
+.cdmHeader, #floatingTitle, .hl
   background: #eee
   .dijitInline
     float: none
@@ -480,7 +492,13 @@ $feed_border: #aaa
       &:before
         left: 0px
         position: absolute
-  .titleWrap
+  .hlTitle
+    color: #555
+    padding-left: 30px
+    padding-right: 90px
+    .contentPreview
+      display: none
+  .titleWrap, 
     a.title
       margin-bottom: 5px
       color: #555
@@ -501,20 +519,26 @@ $feed_border: #aaa
       font-size: 12px
   .hlFeed
     float: left
-  .hlFeed, .updated
+  
+  .hlFeed, .updated, .hlUpdated
     padding-left: 20px
     font-size: 12px
     color: #999
     a
       color: #69d
+  .hlUpdated div
+    float: left
+  .hlUpdated .hlFeed
+    padding: 0px
   .hlFeed:before
-    margin-left: 20px
+    margin-left: 40px
     content: 'feed: '
+  .hlUpdated div:before,    
   .updated:before
     margin-left: 20px
     content: 'date: '
       
-  .scoreWrap
+  .scoreWrap, .hlRight
     .hlScorePic
       position: absolute
       top: 12px
@@ -527,6 +551,13 @@ $feed_border: #aaa
         min-width: 15px
         max-width: 15px
         max-height: 15px
+.hl
+  border-bottom: 1px solid $ramka
+  background: white
+.hl.Selected
+  background: #eee
+.hl.active
+  background: #def
 .cdmContentInner
   clear: both
   padding: 10px !important
@@ -534,6 +565,7 @@ $feed_border: #aaa
   img
     max-width: 100%
     height: auto
+    float: none
 .whiteBox
   @extend .fa
   @extend .fa-lg
@@ -590,3 +622,34 @@ $feed_border: #aaa
     .dijitInline
       float: none
       
+#content-insert_splitter
+  background: $ramka
+
+
+#notify
+  position: absolute
+  right: 10px
+  bottom: 10px
+  width: 240px
+  border: 5px solid $panel
+  z-index: 99
+  padding: 10px
+  background: $panel
+  color: white
+  font-weight: bold
+  border-radius: 10px
+  text-align: center
+  span:first-child
+    background: url('occulkot/loading.gif')
+    width: 20px
+    height: 20px
+    float: left
+    display: inline-block
+    img
+      display: none
+  span:last-child
+    position: absolute
+    right: 5px
+    top: 10px
+    width: 15px
+    

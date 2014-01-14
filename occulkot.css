@@ -30,14 +30,15 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .dijitIcon[src*="images/star.png"] ~ span:before,
 .dijitIcon[src*="images/feed.png"] ~ span:before,
 .dijitIcon[src*="images/archive.png"] ~ span:before,
-.dijitIcon[src*="images/time.png"] ~ span:before, .claro .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
-.claro .dijitTreeExpandoOpened ~ .dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .dijitButtonNode,
+.dijitIcon[src*="images/time.png"] ~ span:before, .claro #feeds-holder .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
+.claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .dijitButtonNode,
 .button_nav, .button_nav:hover, #toolbar .dijitComboButton .dijitArrowButtonInner,
 #toolbar .dijitSelect .dijitButtonText ~ .dijitReset, #headlines-toolbar .dijitComboButton .dijitArrowButtonInner,
 #headlines-toolbar .dijitSelect .dijitButtonText ~ .dijitReset, .dijitDialog .dijitComboButton .dijitArrowButtonInner,
 .dijitDialog .dijitSelect .dijitButtonText ~ .dijitReset, #headlines-toolbar .r > a:before, .cdmFooter .markasread, .cdmFooter img[src*="images/tag.png"] ~ span:before, .cdmHeader > div:first-child .dijitCheckBox,
 .cdmHeader > div:first-child .dijitCheckBoxHover, #floatingTitle > div:first-child .dijitCheckBox,
-#floatingTitle > div:first-child .dijitCheckBoxHover, .whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .dijitDialogCloseIcon,
+#floatingTitle > div:first-child .dijitCheckBoxHover, .hl > div:first-child .dijitCheckBox,
+.hl > div:first-child .dijitCheckBoxHover, .whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .dijitDialogCloseIcon,
 .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .dijitDialogCloseIconHover {
   display: inline-block;
   font-family: FontAwesome;
@@ -103,14 +104,15 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .dijitIcon[src*="images/star.png"] ~ span.pull-left:before,
 .dijitIcon[src*="images/feed.png"] ~ span.pull-left:before,
 .dijitIcon[src*="images/archive.png"] ~ span.pull-left:before,
-.dijitIcon[src*="images/time.png"] ~ span.pull-left:before, .claro .dijitTreeExpandoClosed ~ .pull-left.dijitExpandoText:before,
-.claro .dijitTreeExpandoOpened ~ .pull-left.dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .pull-left.dijitButtonNode,
+.dijitIcon[src*="images/time.png"] ~ span.pull-left:before, .claro #feeds-holder .dijitTreeExpandoClosed ~ .pull-left.dijitExpandoText:before,
+.claro #feeds-holder .dijitTreeExpandoOpened ~ .pull-left.dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .pull-left.dijitButtonNode,
 .pull-left.button_nav, #toolbar .dijitComboButton .pull-left.dijitArrowButtonInner,
 #toolbar .dijitSelect .dijitButtonText ~ .pull-left.dijitReset, #headlines-toolbar .dijitComboButton .pull-left.dijitArrowButtonInner,
 #headlines-toolbar .dijitSelect .dijitButtonText ~ .pull-left.dijitReset, .dijitDialog .dijitComboButton .pull-left.dijitArrowButtonInner,
 .dijitDialog .dijitSelect .dijitButtonText ~ .pull-left.dijitReset, #headlines-toolbar .r > a.pull-left:before, .cdmFooter .pull-left.markasread, .cdmFooter img[src*="images/tag.png"] ~ span.pull-left:before, .cdmHeader > div:first-child .pull-left.dijitCheckBox,
 .cdmHeader > div:first-child .pull-left.dijitCheckBoxHover, #floatingTitle > div:first-child .pull-left.dijitCheckBox,
-#floatingTitle > div:first-child .pull-left.dijitCheckBoxHover, .pull-left.whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-left.dijitDialogCloseIcon,
+#floatingTitle > div:first-child .pull-left.dijitCheckBoxHover, .hl > div:first-child .pull-left.dijitCheckBox,
+.hl > div:first-child .pull-left.dijitCheckBoxHover, .pull-left.whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-left.dijitDialogCloseIcon,
 .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-left.dijitDialogCloseIconHover {
   margin-right: .3em; }
 .fa.pull-right, .dijitIcon[src*="images/folder.png"] ~ span.pull-right:before,
@@ -118,14 +120,15 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .dijitIcon[src*="images/star.png"] ~ span.pull-right:before,
 .dijitIcon[src*="images/feed.png"] ~ span.pull-right:before,
 .dijitIcon[src*="images/archive.png"] ~ span.pull-right:before,
-.dijitIcon[src*="images/time.png"] ~ span.pull-right:before, .claro .dijitTreeExpandoClosed ~ .pull-right.dijitExpandoText:before,
-.claro .dijitTreeExpandoOpened ~ .pull-right.dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .pull-right.dijitButtonNode,
+.dijitIcon[src*="images/time.png"] ~ span.pull-right:before, .claro #feeds-holder .dijitTreeExpandoClosed ~ .pull-right.dijitExpandoText:before,
+.claro #feeds-holder .dijitTreeExpandoOpened ~ .pull-right.dijitExpandoText:before, #toolbar .actionChooser .dijitDropDownButton .pull-right.dijitButtonNode,
 .pull-right.button_nav, #toolbar .dijitComboButton .pull-right.dijitArrowButtonInner,
 #toolbar .dijitSelect .dijitButtonText ~ .pull-right.dijitReset, #headlines-toolbar .dijitComboButton .pull-right.dijitArrowButtonInner,
 #headlines-toolbar .dijitSelect .dijitButtonText ~ .pull-right.dijitReset, .dijitDialog .dijitComboButton .pull-right.dijitArrowButtonInner,
 .dijitDialog .dijitSelect .dijitButtonText ~ .pull-right.dijitReset, #headlines-toolbar .r > a.pull-right:before, .cdmFooter .pull-right.markasread, .cdmFooter img[src*="images/tag.png"] ~ span.pull-right:before, .cdmHeader > div:first-child .pull-right.dijitCheckBox,
 .cdmHeader > div:first-child .pull-right.dijitCheckBoxHover, #floatingTitle > div:first-child .pull-right.dijitCheckBox,
-#floatingTitle > div:first-child .pull-right.dijitCheckBoxHover, .pull-right.whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-right.dijitDialogCloseIcon,
+#floatingTitle > div:first-child .pull-right.dijitCheckBoxHover, .hl > div:first-child .pull-right.dijitCheckBox,
+.hl > div:first-child .pull-right.dijitCheckBoxHover, .pull-right.whiteBox, .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-right.dijitDialogCloseIcon,
 .claro #feedAddDlg.dijitDialog .dijitDialogTitleBar .pull-right.dijitDialogCloseIconHover {
   margin-left: .3em; }
 
@@ -439,7 +442,8 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 
 .fa-check-square-o:before, .cdmFooter .markasread:before, .cdmHeader > div:first-child .dijitCheckBoxChecked.dijitCheckBox:before,
 .cdmHeader > div:first-child .dijitCheckBoxCheckedHover.dijitCheckBox:before, #floatingTitle > div:first-child .dijitCheckBoxChecked.dijitCheckBox:before,
-#floatingTitle > div:first-child .dijitCheckBoxCheckedHover.dijitCheckBox:before {
+#floatingTitle > div:first-child .dijitCheckBoxCheckedHover.dijitCheckBox:before, .hl > div:first-child .dijitCheckBoxChecked.dijitCheckBox:before,
+.hl > div:first-child .dijitCheckBoxCheckedHover.dijitCheckBox:before {
   content: "\f046"; }
 
 .fa-arrows:before {
@@ -478,8 +482,8 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .fa-chevron-left:before {
   content: "\f053"; }
 
-.fa-chevron-right:before, .claro .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
-.claro .dijitTreeExpandoOpened ~ .dijitExpandoText:before {
+.fa-chevron-right:before, .claro #feeds-holder .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
+.claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText:before {
   content: "\f054"; }
 
 .fa-plus-circle:before, button[title="Subscribe To Feed"]:before {
@@ -584,7 +588,7 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .fa-chevron-up:before, button[title="Previous Post"]:before {
   content: "\f077"; }
 
-.fa-chevron-down:before, .claro .dijitTreeExpandoOpened ~ .dijitExpandoText:before, button[title="Next Post"]:before, #toolbar .dijitComboButton .dijitArrowButtonInner:before,
+.fa-chevron-down:before, .claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText:before, button[title="Next Post"]:before, #toolbar .dijitComboButton .dijitArrowButtonInner:before,
 #toolbar .dijitSelect .dijitButtonText ~ .dijitReset:before, #headlines-toolbar .dijitComboButton .dijitArrowButtonInner:before,
 #headlines-toolbar .dijitSelect .dijitButtonText ~ .dijitReset:before, .dijitDialog .dijitComboButton .dijitArrowButtonInner:before,
 .dijitDialog .dijitSelect .dijitButtonText ~ .dijitReset:before {
@@ -674,7 +678,8 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 
 .fa-square-o:before, .Unread .cdmFooter .markasread:before, .cdmHeader > div:first-child .dijitCheckBox:before,
 .cdmHeader > div:first-child .dijitCheckBoxHover:before, #floatingTitle > div:first-child .dijitCheckBox:before,
-#floatingTitle > div:first-child .dijitCheckBoxHover:before {
+#floatingTitle > div:first-child .dijitCheckBoxHover:before, .hl > div:first-child .dijitCheckBox:before,
+.hl > div:first-child .dijitCheckBoxHover:before {
   content: "\f096"; }
 
 .fa-bookmark-o:before {
@@ -1393,7 +1398,7 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 
 #feeds-holder {
   background: #111111;
-  color: #aaaaaa; }
+  color: #666666; }
 
 .dijitIcon[src*="images/folder.png"],
 .dijitIcon[src*="images/fresh.png"],
@@ -1402,15 +1407,21 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
 .dijitIcon[src*="images/archive.png"],
 .dijitIcon[src*="images/time.png"] {
   display: none; }
+  .dijitIcon[src*="images/folder.png"] ~ span,
+  .dijitIcon[src*="images/fresh.png"] ~ span,
+  .dijitIcon[src*="images/star.png"] ~ span,
+  .dijitIcon[src*="images/feed.png"] ~ span,
+  .dijitIcon[src*="images/archive.png"] ~ span,
+  .dijitIcon[src*="images/time.png"] ~ span {
+    margin-left: 40px !important; }
   .dijitIcon[src*="images/folder.png"] ~ span:before,
   .dijitIcon[src*="images/fresh.png"] ~ span:before,
   .dijitIcon[src*="images/star.png"] ~ span:before,
   .dijitIcon[src*="images/feed.png"] ~ span:before,
   .dijitIcon[src*="images/archive.png"] ~ span:before,
   .dijitIcon[src*="images/time.png"] ~ span:before {
-    width: 15px;
-    margin-left: 20px;
-    margin-right: 5px;
+    width: 20px;
+    position: relative;
     text-align: center; }
     .dijitIcon[src*="images/folder.png"] ~ span:before:before,
     .dijitIcon[src*="images/fresh.png"] ~ span:before:before,
@@ -1420,84 +1431,95 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
     .dijitIcon[src*="images/time.png"] ~ span:before:before {
       font-size: 10px; }
 
-.claro .dijitTreeExpandoClosed,
-.claro .dijitTreeExpandoOpened {
+.claro #feeds-holder .dijitTreeExpandoClosed,
+.claro #feeds-holder .dijitTreeExpandoOpened {
   display: none; }
-  .claro .dijitTreeExpandoClosed ~ .dijitExpandoText,
-  .claro .dijitTreeExpandoOpened ~ .dijitExpandoText {
+  .claro #feeds-holder .dijitTreeExpandoClosed ~ .dijitExpandoText,
+  .claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText {
     display: block;
     float: left;
-    width: 30px;
+    width: 20px;
+    margin-right: 20px;
+    text-align: right;
     z-index: 14;
     cursor: pointer;
     color: transparent; }
-  .claro .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
-  .claro .dijitTreeExpandoOpened ~ .dijitExpandoText:before {
+  .claro #feeds-holder .dijitTreeExpandoClosed ~ .dijitExpandoText:before,
+  .claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText:before {
     color: red;
     padding-left: 2px; }
-    .claro .dijitTreeExpandoClosed ~ .dijitExpandoText:before:before,
-    .claro .dijitTreeExpandoOpened ~ .dijitExpandoText:before:before {
+    .claro #feeds-holder .dijitTreeExpandoClosed ~ .dijitExpandoText:before:before,
+    .claro #feeds-holder .dijitTreeExpandoOpened ~ .dijitExpandoText:before:before {
       position: absolute; }
 
 .dijitIcon[src*="lib/dojo/resources/blank.gif"] {
   display: none; }
 
-.claro .loadingNode {
+.claro #feeds-holder .loadingNode {
   display: none; }
-.claro .dijitTreeRowHover, .claro .dijitTreeRowSelected, .claro .dijitTreeRow, .claro .dijitHover, .claro .dijitTreeContent {
+.claro #feeds-holder .dijitTreeRowHover, .claro #feeds-holder .dijitTreeRowSelected, .claro #feeds-holder .dijitTreeRow, .claro #feeds-holder .dijitHover, .claro #feeds-holder .dijitTreeContent {
   color: inherit;
   border: 0px;
   padding: 0px;
   margin: 0px;
   background: transparent; }
-.claro .dijitInline {
-  float: left; }
-.claro .counterNode {
+.claro #feeds-holder .counterNode {
   text-align: center;
-  width: 15px;
+  width: 20px;
   font-size: 11px;
   margin-top: 3px;
   position: absolute;
-  left: 13px; }
-.claro .feedIcon, .claro .dijitTreeIcon {
+  left: 20px; }
+.claro #feeds-holder .dijitTreeExpandoLeaf {
+  display: none; }
+.claro #feeds-holder .feedIcon, .claro #feeds-holder .dijitTreeIcon {
   float: left;
   min-width: 15px;
   max-width: 15px;
   max-height: 15px;
   margin-right: 5px; }
-.claro .dijitTreeContent {
-  float: left; }
-.claro .dijitInline > .dijitTreeContent {
-  float: none; }
-.claro .dijitTreeLabel {
+.claro #feeds-holder .dijitTreeLabel {
   cursor: pointer;
   display: block;
   float: none; }
-.claro .dijitTreeExpando {
+.claro #feeds-holder .dijitTreeExpando {
   float: left; }
-.claro .dijitTreeContainer .dijitTreeContainer .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent > .dijitTreeIcon {
-  margin-left: 20px; }
-.claro .dijitTreeNode {
+.claro #feeds-holder .dijitTreeContainer .dijitTreeContainer .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent {
   position: relative; }
-.claro .dijitTreeContainer :first-child .dijitTreeRow {
-  padding-top: 10px; }
-.claro .dijitTreeIsLast .dijitTreeRow {
+  .claro #feeds-holder .dijitTreeContainer .dijitTreeContainer .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent .dijitTreeLabel {
+    margin-left: 60px; }
+  .claro #feeds-holder .dijitTreeContainer .dijitTreeContainer .dijitTreeContainer > .dijitTreeNode > .dijitTreeRow > .dijitTreeContent .dijitTreeIcon {
+    position: absolute;
+    left: 0px; }
+.claro #feeds-holder .dijitTreeNode {
+  position: relative; }
+.claro #feeds-holder .dijitTreeContainer .dijitTreeNode:first-child {
+  margin-top: 10px; }
+.claro #feeds-holder .dijitTreeIsLast .dijitTreeRow {
   margin-bottom: 10px; }
-.claro .dijitTreeRow {
+.claro #feeds-holder .dijitTreeRow {
+  position: relative;
   padding-top: 2px; }
-.claro .dijitTreeRowHover {
+  .claro #feeds-holder .dijitTreeRow .dijitInline {
+    display: none; }
+  .claro #feeds-holder .dijitTreeRow .dijitTreeContent {
+    margin-left: 40px; }
+.claro #feeds-holder .Unread.dijitTreeRow {
+  color: #cccccc; }
+.claro #feeds-holder .dijitTreeRowHover {
   color: red; }
-.claro .dijitTreeRowSelected {
+.claro #feeds-holder .dijitTreeRowSelected {
   font-weight: bold;
   color: white; }
-.claro .dijitToolbar {
-  background: transparent;
-  border: 0px; }
+
 .claro .dijitSplitterV {
   background: #999999; }
 .claro .dijitSplitterVHover {
   background: #999999; }
 
+#toolbar .dijitToolbar, #headlines-toolbar .dijitToolbar, .dijitDialog .dijitToolbar {
+  background: transparent;
+  border: 0px; }
 #toolbar .dijitComboButtonHover,
 #toolbar .dijitComboButtonHover .dijitButtonNodeHover,
 #toolbar .dijitButtonNode,
@@ -1511,6 +1533,8 @@ img, .claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
   background: transparent;
   padding: 0px;
   border: 0px; }
+#toolbar .dijitInline, #headlines-toolbar .dijitInline, .dijitDialog .dijitInline {
+  float: left; }
 
 button[title="Subscribe To Feed"]:after {
   content: "+add"; }
@@ -1847,14 +1871,14 @@ html, button, input, select, textarea {
     color: #880000;
     text-decoration: none; }
 
-.cdmHeader, #floatingTitle {
+.cdmHeader, #floatingTitle, .hl {
   background: #eeeeee;
   position: relative;
   padding-top: 5px;
   padding-bottom: 5px; }
-  .cdmHeader .dijitInline, #floatingTitle .dijitInline {
+  .cdmHeader .dijitInline, #floatingTitle .dijitInline, .hl .dijitInline {
     float: none; }
-  .cdmHeader > div:first-child, #floatingTitle > div:first-child {
+  .cdmHeader > div:first-child, #floatingTitle > div:first-child, .hl > div:first-child {
     width: 80px;
     text-align: right;
     background: #333333;
@@ -1865,7 +1889,7 @@ html, button, input, select, textarea {
     padding: 2px;
     vertical-align: top !important;
     border-radius: 3px; }
-    .cdmHeader > div:first-child img, #floatingTitle > div:first-child img {
+    .cdmHeader > div:first-child img, #floatingTitle > div:first-child img, .hl > div:first-child img {
       width: 15px;
       height: auto;
       margin: 2px;
@@ -1873,7 +1897,8 @@ html, button, input, select, textarea {
       margin-bottom: 0px; }
     .cdmHeader > div:first-child .dijitCheckBox,
     .cdmHeader > div:first-child .dijitCheckBoxHover, #floatingTitle > div:first-child .dijitCheckBox,
-    #floatingTitle > div:first-child .dijitCheckBoxHover {
+    #floatingTitle > div:first-child .dijitCheckBoxHover, .hl > div:first-child .dijitCheckBox,
+    .hl > div:first-child .dijitCheckBoxHover {
       width: 15px;
       position: relative;
       background: none;
@@ -1884,15 +1909,23 @@ html, button, input, select, textarea {
       margin-top: -5px; }
       .cdmHeader > div:first-child .dijitCheckBox *,
       .cdmHeader > div:first-child .dijitCheckBoxHover *, #floatingTitle > div:first-child .dijitCheckBox *,
-      #floatingTitle > div:first-child .dijitCheckBoxHover * {
+      #floatingTitle > div:first-child .dijitCheckBoxHover *, .hl > div:first-child .dijitCheckBox *,
+      .hl > div:first-child .dijitCheckBoxHover * {
         display: block;
         bacground: transparent; }
       .cdmHeader > div:first-child .dijitCheckBox:before,
       .cdmHeader > div:first-child .dijitCheckBoxHover:before, #floatingTitle > div:first-child .dijitCheckBox:before,
-      #floatingTitle > div:first-child .dijitCheckBoxHover:before {
+      #floatingTitle > div:first-child .dijitCheckBoxHover:before, .hl > div:first-child .dijitCheckBox:before,
+      .hl > div:first-child .dijitCheckBoxHover:before {
         left: 0px;
         position: absolute; }
-  .cdmHeader .titleWrap a.title, #floatingTitle .titleWrap a.title {
+  .cdmHeader .hlTitle, #floatingTitle .hlTitle, .hl .hlTitle {
+    color: #555555;
+    padding-left: 30px;
+    padding-right: 90px; }
+    .cdmHeader .hlTitle .contentPreview, #floatingTitle .hlTitle .contentPreview, .hl .hlTitle .contentPreview {
+      display: none; }
+  .cdmHeader .titleWrap a.title, #floatingTitle .titleWrap a.title, .hl .titleWrap a.title {
     margin-bottom: 5px;
     color: #555555;
     font-weight: medium;
@@ -1903,38 +1936,55 @@ html, button, input, select, textarea {
     font-size: 25px;
     line-height: 0.6;
     padding-top: 3px; }
-  .cdmHeader .titleWrap .author, #floatingTitle .titleWrap .author {
+  .cdmHeader .titleWrap .author, #floatingTitle .titleWrap .author, .hl .titleWrap .author {
     color: #999999;
     padding-left: 40px;
     display: block;
     float: left;
     font-size: 12px; }
-  .cdmHeader .hlFeed, #floatingTitle .hlFeed {
+  .cdmHeader .hlFeed, #floatingTitle .hlFeed, .hl .hlFeed {
     float: left; }
-  .cdmHeader .hlFeed, .cdmHeader .updated, #floatingTitle .hlFeed, #floatingTitle .updated {
+  .cdmHeader .hlFeed, .cdmHeader .updated, .cdmHeader .hlUpdated, #floatingTitle .hlFeed, #floatingTitle .updated, #floatingTitle .hlUpdated, .hl .hlFeed, .hl .updated, .hl .hlUpdated {
     padding-left: 20px;
     font-size: 12px;
     color: #999999; }
-    .cdmHeader .hlFeed a, .cdmHeader .updated a, #floatingTitle .hlFeed a, #floatingTitle .updated a {
+    .cdmHeader .hlFeed a, .cdmHeader .updated a, .cdmHeader .hlUpdated a, #floatingTitle .hlFeed a, #floatingTitle .updated a, #floatingTitle .hlUpdated a, .hl .hlFeed a, .hl .updated a, .hl .hlUpdated a {
       color: #6699dd; }
-  .cdmHeader .hlFeed:before, #floatingTitle .hlFeed:before {
-    margin-left: 20px;
+  .cdmHeader .hlUpdated div, #floatingTitle .hlUpdated div, .hl .hlUpdated div {
+    float: left; }
+  .cdmHeader .hlUpdated .hlFeed, #floatingTitle .hlUpdated .hlFeed, .hl .hlUpdated .hlFeed {
+    padding: 0px; }
+  .cdmHeader .hlFeed:before, #floatingTitle .hlFeed:before, .hl .hlFeed:before {
+    margin-left: 40px;
     content: "feed: "; }
-  .cdmHeader .updated:before, #floatingTitle .updated:before {
+  .cdmHeader .hlUpdated div:before,
+  .cdmHeader .updated:before, #floatingTitle .hlUpdated div:before,
+  #floatingTitle .updated:before, .hl .hlUpdated div:before,
+  .hl .updated:before {
     margin-left: 20px;
     content: "date: "; }
-  .cdmHeader .scoreWrap .hlScorePic, #floatingTitle .scoreWrap .hlScorePic {
+  .cdmHeader .scoreWrap .hlScorePic, .cdmHeader .hlRight .hlScorePic, #floatingTitle .scoreWrap .hlScorePic, #floatingTitle .hlRight .hlScorePic, .hl .scoreWrap .hlScorePic, .hl .hlRight .hlScorePic {
     position: absolute;
     top: 12px;
     right: 67px; }
-  .cdmHeader .scoreWrap span, #floatingTitle .scoreWrap span {
+  .cdmHeader .scoreWrap span, .cdmHeader .hlRight span, #floatingTitle .scoreWrap span, #floatingTitle .hlRight span, .hl .scoreWrap span, .hl .hlRight span {
     position: absolute;
     left: 10px;
     top: 10px; }
-    .cdmHeader .scoreWrap span img, #floatingTitle .scoreWrap span img {
+    .cdmHeader .scoreWrap span img, .cdmHeader .hlRight span img, #floatingTitle .scoreWrap span img, #floatingTitle .hlRight span img, .hl .scoreWrap span img, .hl .hlRight span img {
       min-width: 15px;
       max-width: 15px;
       max-height: 15px; }
+
+.hl {
+  border-bottom: 1px solid #999999;
+  background: white; }
+
+.hl.Selected {
+  background: #eeeeee; }
+
+.hl.active {
+  background: #ddeeff; }
 
 .cdmContentInner {
   clear: both;
@@ -1942,7 +1992,8 @@ html, button, input, select, textarea {
   padding-left: 50px !important; }
   .cdmContentInner img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    float: none; }
 
 .whiteBox {
   vertical-aligm: top;
@@ -1996,3 +2047,33 @@ html, button, input, select, textarea {
     color: red; }
   .claro #feedAddDlg.dijitDialog .dlgSecCont .dijitInline {
     float: none; }
+
+#content-insert_splitter {
+  background: #999999; }
+
+#notify {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 240px;
+  border: 5px solid #111111;
+  z-index: 99;
+  padding: 10px;
+  background: #111111;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center; }
+  #notify span:first-child {
+    background: url("occulkot/loading.gif");
+    width: 20px;
+    height: 20px;
+    float: left;
+    display: inline-block; }
+    #notify span:first-child img {
+      display: none; }
+  #notify span:last-child {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    width: 15px; }
